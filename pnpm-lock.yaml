@@ -29,6 +29,7 @@ importers:
       '@vitest/coverage-c8': ^0.24.5
       '@vue/repl': ^1.3.2
       '@vue/test-utils': ^2.2.1
+      components-helper: ^2.1.4
       conventional-changelog-cli: ^2.2.2
       eslint: ^8.26.0
       execa: ^6.1.0
@@ -81,14 +82,15 @@ importers:
       '@types/prompts': 2.4.1
       '@types/semver': 7.3.13
       '@vexip-ui/commitlint-config': 0.1.0
-      '@vexip-ui/eslint-config': 0.5.1_typescript@4.8.4
+      '@vexip-ui/eslint-config': 0.5.1_wyqvi574yv7oiwfeinomdzmc3m
       '@vexip-ui/prettier-config': 0.1.0_prettier@2.7.1
-      '@vexip-ui/stylelint-config': 0.1.1
+      '@vexip-ui/stylelint-config': 0.1.1_stylelint@14.14.1
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.14+vue@3.2.41
       '@vitejs/plugin-vue-jsx': 1.3.10
       '@vitest/coverage-c8': 0.24.5_stdbuzg2wqwledx5f7rpaqqvte
       '@vue/repl': 1.3.2_vue@3.2.41
       '@vue/test-utils': 2.2.1_vue@3.2.41
+      components-helper: 2.1.4
       conventional-changelog-cli: 2.2.2
       eslint: 8.26.0
       execa: 6.1.0
@@ -1774,8 +1776,10 @@ packages:
       '@commitlint/config-conventional': 17.2.0
     dev: true
 
-  /@vexip-ui/eslint-config/0.5.1_typescript@4.8.4:
+  /@vexip-ui/eslint-config/0.5.1_wyqvi574yv7oiwfeinomdzmc3m:
     resolution: {integrity: sha512-mid65O8/T9mMreBG4ajSD45Xi2pGJtf5KjTZzJwnleXp44DDMgw3eLLHOM7UyIzJerHrgX0FpgfQdSZdQDaPog==}
+    peerDependencies:
+      eslint: '>=8.0.0'
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.42.0_6xw5wg2354iw4zujk2f3vyfrzu
       '@typescript-eslint/parser': 5.42.0_wyqvi574yv7oiwfeinomdzmc3m
@@ -1809,8 +1813,10 @@ packages:
       prettier: 2.7.1
     dev: true
 
-  /@vexip-ui/stylelint-config/0.1.1:
+  /@vexip-ui/stylelint-config/0.1.1_stylelint@14.14.1:
     resolution: {integrity: sha512-dFG2zhyZ+2MUXKf3jg/aGU7lyllOWhnqcpWVFyoh96DBd9VbLeTKZcN0GucvpjQy4hR9GgrzhKycfwcm5iYP0g==}
+    peerDependencies:
+      stylelint: '>=14.0.0'
     dependencies:
       postcss: 8.4.18
       postcss-html: 1.5.0
@@ -1822,8 +1828,6 @@ packages:
       stylelint-config-standard: 28.0.0_stylelint@14.14.1
       stylelint-config-standard-scss: 5.0.0_t5qxeji2l54punp3pwjdchi3we
       stylelint-order: 5.0.0_stylelint@14.14.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@vitejs/plugin-vue-jsx/1.3.10:
@@ -2899,6 +2903,13 @@ packages:
       dot-prop: 5.3.0
     dev: true
 
+  /components-helper/2.1.4:
+    resolution: {integrity: sha512-XJ1vaj1pULQrctmzbyn9uxnHD1SWpVQnd2OLd+aZeUtQlRd7GDonWqWtu6u8+OZRu6jjTfxN4UuSfMX0z7HQ+g==}
+    engines: {node: '>15.0.0'}
+    dependencies:
+      fast-glob: 3.2.12
+    dev: true
+
   /compressible/2.0.18:
     resolution: {integrity: sha512-AF3r7P5dWxL8MxyITRMlORQNaOA2IkAFaTr4k7BUumjPtRpGDTZpl0Pb1XCO6JeDCBdp126Cgs9sMxqSjgYyRg==}
     engines: {node: '>= 0.6'}
@@ -3106,8 +3117,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      is-text-path: 1.0.1
       JSONStream: 1.3.5
+      is-text-path: 1.0.1
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
